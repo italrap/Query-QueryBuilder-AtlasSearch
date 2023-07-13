@@ -54,7 +54,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {},
             'Should return empty object'
         );
@@ -91,7 +91,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[{"term":{"price":"10"}}]}},
             'Should build a term query'
         );
@@ -109,7 +109,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[{"wildcard":{"name":"*gmail*"}}]}},
             'Should build a wildcard query'
         );
@@ -128,7 +128,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must_not":[{"term":{"price":"10"}}]}},
             'Should build a must_not term query'
         );
@@ -149,7 +149,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[
                 {"range":{"price":{"lt":"10"}}},
                 {"range":{"price":{"lte":"10"}}}
@@ -173,7 +173,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[
                 {"range":{"price":{"gt":"10"}}},
                 {"range":{"price":{"gte":"10"}}}
@@ -194,7 +194,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[ {"range":{"price":{"gte":"10", "lte":"100"}}} ]}},
             'Should build a range query'
         );
@@ -212,7 +212,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[ {"terms":{"name":["paul","mary"]}}]}},
             'Should build a range query'
         );
@@ -231,7 +231,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must_not":[ {"terms":{"name":["paul","mary"]}}]}},
             'Should build a range query'
         );
@@ -249,7 +249,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must_not":[ {"exists":{"field":"name"}}]}},
             'Should build a must-not-exists query'
         );
@@ -267,7 +267,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[ {"exists":{"field":"name"}}]}},
             'Should build a must-exists query'
         );
@@ -288,7 +288,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"should":[
                 {"exists":{"field":"name"}},
                 {"bool":{"must_not": [{"exists": {"field":"price"}}]}}
@@ -406,7 +406,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must": [
                 {"term": {"price": "10"}},
                 {"bool": {"should" : [
@@ -434,7 +434,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"should": [
                 {"term": {"price": "10"}},
                 {"term": {"price": "100"}},
@@ -456,7 +456,7 @@ $(function() {
         });
 
         assert.deepEqual(
-            $b.queryBuilder('getESBool'),
+            $b.queryBuilder('getAtlasSearch'),
             {"bool": {"must":[{"term":{"name":"paul"}}]}},
             'Should build a term query and value is capitalized'
         );

@@ -9,9 +9,9 @@ Allows to export [jQuery QueryBuilder](http://mistic100.github.io/jQuery-QueryBu
 
 The plugin adds a new public method to all QueryBuilder instances.
 
-### getESBool
+### getAtlasSearch
 
-Performs validation and returns the rules as a valid Elasticsearch bool query.
+Performs validation and returns the rules as a valid AtlasSearch query.
 
 ```js
 var esQuery = $('#builder').queryBuilder('getAtlasSearch');
@@ -19,7 +19,7 @@ var esQuery = $('#builder').queryBuilder('getAtlasSearch');
 
 ### Operators configuration
 
-The Atlassearch plugin requires special configuration for operators to convert rules. This configuration is stored in the ```ESBoolOperators``` option, see the source code for more details.
+The Atlassearch plugin requires special configuration for operators to convert rules. This configuration is stored in the ```AtlasSearchOperators``` option, see the source code for more details.
 
 ## Dev
 
