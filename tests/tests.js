@@ -290,7 +290,7 @@ $(function() {
         assert.deepEqual(
             $b.queryBuilder('getAtlasSearch'),
             {"bool": {"should":[
-                {"exists":{"field":"name"}},
+                {"exists":{"field":"name.keyword"}},
                 {"bool":{"must_not": [{"exists": {"field":"price"}}]}}
             ]}},
             'Should build a should query with a bool subquery'
@@ -410,8 +410,8 @@ $(function() {
             {"bool": {"must": [
                 {"term": {"price": "10"}},
                 {"bool": {"should" : [
-                    {"term": {"name": "paul"}},
-                    {"term": {"name": "mary"}}
+                    {"term": {"name.keyword": "paul"}},
+                    {"term": {"name.keyword": "mary"}}
                 ]}}
             ]}},
             'Should build a bool query with a nested bool sub query'
@@ -428,7 +428,7 @@ $(function() {
                 rules: [
                     {id: 'price', field: 'price', operator: 'equal', value: 10},
                     {id: 'price', field: 'price', operator: 'equal', value: 100},
-                    {id: 'name', field: 'name', operator: 'not_equal', value: 'paul'}
+                    {id: 'name', field: 'name.keyword', operator: 'not_equal', value: 'paul'}
                 ]
             }
         });
@@ -438,7 +438,7 @@ $(function() {
             {"bool": {"should": [
                 {"term": {"price": "10"}},
                 {"term": {"price": "100"}},
-                {"bool": {"must_not" : [ {"term": {"name": "paul"}}]}}
+                {"bool": {"must_not" : [ {"term": {"name.keyword": "paul"}}]}}
             ]}},
             'Should build a query with should conditions and a sub query to handle not_equal operator'
         );
@@ -457,7 +457,7 @@ $(function() {
 
         assert.deepEqual(
             $b.queryBuilder('getAtlasSearch'),
-            {"bool": {"must":[{"term":{"name":"paul"}}]}},
+            {"bool": {"must":[{"term":{"name.keyword":"PAUL"}}]}},
             'Should build a term query and value is capitalized'
         );
 

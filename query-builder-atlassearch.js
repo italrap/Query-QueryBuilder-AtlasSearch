@@ -383,15 +383,24 @@
     * Get the right type of clause in the bool query
     */
     function getClauseWord(condition, operator) {
-        if (condition === 'AND' && (operator !== 'not_equal' && operator !== 'not_in' && operator !== 'not_contains'
-            && operator !== 'not_begins_with' && operator !== 'not_ends_with'
-            && operator !== 'is_null' && operator !== 'is_not_empty'
-            && operator !== 'not_between')) { return 'must' }
-        if (condition === 'AND' && (operator === 'not_equal' || operator === 'not_in' || operator === 'not_contains'
-            || operator === 'not_begins_with' || operator === 'not_ends_with' ||
-            operator === 'is_null' || operator === 'is_not_empty' ||
-            operator === 'not_between')) { return 'must_not' }
-        if (condition === 'OR') { return 'should' }
+        switch (condition) {
+            case 'AND':
+                switch (operator) {
+                    case 'not_equal':
+                    case 'not_in':
+                    case 'not_contains':
+                    case 'not_begins_with':
+                    case 'not_ends_with':
+                    case 'is_null':
+                    case 'is_not_empty':
+                    case 'not_between':
+                        return 'must_not';
+                    default:
+                        return 'must';
+                }
+            case 'OR':
+                return 'should'
+        }
     }
 
     function escapeBackSlash(value) {

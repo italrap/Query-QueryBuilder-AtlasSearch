@@ -1,7 +1,7 @@
 {
   "version": "1.1.4.12",
-  "name": "jquery-querybuilder-atlassearch-etx",
-  "homepage": "https://github.com/davegraziosi/jQuery-QueryBuilder-Elasticsearch.git",
+  "name": "jquery-querybuilder-atlassearch",
+  "homepage": "https://github.com/italrap/jQuery-QueryBuilder-Elasticsearch.git",
   "dependencies": {
     "moment": "^2.17.1",
     "moment-timezone": "^0.5.11"
