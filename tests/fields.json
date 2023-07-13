@@ -1,0 +1,1554 @@
+{
+    "ACKNOWLEDGED": {
+        "TYPE": "integer",
+        "LABEL": "Acknowledged"
+    },
+    "ACKTIME": {
+        "TYPE": "date",
+        "LABEL": "AckTime"
+    },
+    "ACKUSERID": {
+        "TYPE": "term",
+        "LABEL": "AckUserId"
+    },
+    "ACTION_MESSAGE": {
+        "TYPE": "term",
+        "LABEL": "ActionMessage"
+    },
+    "ACTION_STATUS": {
+        "TYPE": "term",
+        "LABEL": "ActionStatus"
+    },
+    "ADMINISTRATIVE_STATE": {
+        "TYPE": "term",
+        "LABEL": "ADMINISTRATIVE_STATE"
+    },
+    "AGENT": {
+        "TYPE": "term",
+        "LABEL": "Agent"
+    },
+    "ALARMCOUNT": {
+        "TYPE": "integer",
+        "LABEL": "Cont"
+    },
+    "ALARMGROUP": {
+        "TYPE": "term",
+        "LABEL": "AlarmGroup"
+    },
+    "ALARMID": {
+        "TYPE": "term",
+        "LABEL": "AlarmId"
+    },
+    "ALARMTYPE": {
+        "TYPE": "term",
+        "LABEL": "Tipo All"
+    },
+    "ALARMTYPEID": {
+        "TYPE": "integer",
+        "LABEL": "AlarmtypeID"
+    },
+    "ALARM_USERID_LOCK": {
+        "TYPE": "term",
+        "LABEL": "Alarm_UserID_Lock"
+    },
+    "APPARATO_SUPERIORE": {
+        "TYPE": "term"
+    },
+    "ASSET_TECNOLOGICO": {
+        "TYPE": "term",
+        "LABEL": "Asset Tecnologico"
+    },
+    "BB": {
+        "TYPE": "integer",
+        "LABEL": "BB"
+    },
+    "BBTX_ARCORRELATI": {
+        "TYPE": "integer",
+        "LABEL": "BBTX_ARCorrelati"
+    },
+    "BBTX_COMPETENZA": {
+        "TYPE": "integer",
+        "LABEL": "TX_Custom6"
+    },
+    "BBTX_COMPETENZAINTERNA": {
+        "TYPE": "integer",
+        "LABEL": "BBTX_CompetenzaInterna"
+    },
+    "BBTX_STATOBB": {
+        "TYPE": "integer",
+        "LABEL": "BBTX_statoBB"
+    },
+    "BBTX_STATOTX": {
+        "TYPE": "integer",
+        "LABEL": "BBTX_StatoTX"
+    },
+    "BB_AGGREGATEDALARM": {
+        "TYPE": "term"
+    },
+    "BB_GRUPPO": {
+        "TYPE": "term",
+        "LABEL": "BB_Gruppo"
+    },
+    "BB_MGMTSTATUS": {
+        "TYPE": "integer",
+        "LABEL": "BB_MgmtStatus"
+    },
+    "BB_MULTICAST": {
+        "TYPE": "integer",
+        "LABEL": "BB_Multicast"
+    },
+    "BB_RELATEDALARM": {
+        "TYPE": "term",
+        "LABEL": "PredictiveValue"
+    },
+    "BB_SUPPORTEDPVCS": {
+        "TYPE": "integer",
+        "LABEL": "BB_supportedpvcs"
+    },
+    "BB_VARINT1": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint1"
+    },
+    "BB_VARINT2": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint2"
+    },
+    "BB_VARINT3": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint3"
+    },
+    "BB_VARINT4": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint4"
+    },
+    "BB_VARINT5": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint5"
+    },
+    "BB_VARINT6": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint6"
+    },
+    "BB_VARINT7": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint7"
+    },
+    "BB_VARINT8": {
+        "TYPE": "integer",
+        "LABEL": "BB_varint8"
+    },
+    "BB_VARINT9": {
+        "TYPE": "integer"
+    },
+    "BB_VARSTRING1": {
+        "TYPE": "term",
+        "LABEL": "RemoteNode"
+    },
+    "BB_VARSTRING8": {
+        "TYPE": "term",
+        "LABEL": "BB_VARSTRING8"
+    },
+    "BB_VPNNUM": {
+        "TYPE": "integer",
+        "LABEL": "BB_VpnNum"
+    },
+    "BB_VRFNAME": {
+        "TYPE": "term",
+        "LABEL": "ActionPlanID"
+    },
+    "CARDNAME": {
+        "TYPE": "term",
+        "LABEL": "Modulo/Rete"
+    },
+    "CARDTYPEDESCR": {
+        "TYPE": "term",
+        "LABEL": "CardTypeDescr"
+    },
+    "CARDTYPEID": {
+        "TYPE": "term",
+        "LABEL": "CardTypeId"
+    },
+    "CATEGORY": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "21": "Technical Infrastructures2",
+            "20": "Technical Infrastructures",
+            "0": "Fault",
+            "1": "Degrado"
+        },
+        "LABEL": "Category"
+    },
+    "CI": {
+        "TYPE": "term"
+    },
+    "CLASS": {
+        "TYPE": "integer",
+        "LABEL": "Class"
+    },
+    "CLIENTI_CALCIO": {
+        "TYPE": "integer"
+    },
+    "CLIENTNAME": {
+        "TYPE": "term",
+        "LABEL": "ClientName"
+    },
+    "CLOSEONALARM": {
+        "TYPE": "date"
+    },
+    "CLOSETIME": {
+        "TYPE": "date",
+        "LABEL": "Closetime"
+    },
+    "CODICE_SITO_CONDIVISORE": {
+        "TYPE": "term",
+        "LABEL": "Codice Condivisore"
+    },
+    "COMPETENCEFOB": {
+        "TYPE": "term",
+        "LABEL": "CompetenceFOB"
+    },
+    "COMPETENCEOB": {
+        "TYPE": "term",
+        "LABEL": "CompetenceOB"
+    },
+    "CORRELATIONROLE": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "10": "Padre(10)",
+            "75": "Figlio(75)",
+            "35": "Figlio(35)",
+            "4": "Non Correlato(4)",
+            "70": "Padre(70)",
+            "42": "Figlio(42)",
+            "2": "Figlio(2)",
+            "5": "Figlio(5)",
+            "32": "Figlio(32)",
+            "0": "Non Correlato(0)",
+            "40": "Padre(40)",
+            "20": "Padre(20)",
+            "72": "Figlio(72)",
+            "45": "Figlio(45)",
+            "30": "Padre(30)"
+        },
+        "LABEL": "CorrelationRole"
+    },
+    "CORRELATIONTRIGGER": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "2": "Innesco SDH",
+            "1": "Innesco PDH 565 oPDH 140"
+        },
+        "LABEL": "CorrelationTrigger"
+    },
+    "CORRINTRA": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "0": "Non Correlabile",
+            "1": "Correlabile"
+        },
+        "LABEL": "CorrIntra"
+    },
+    "CORRSTR1": {
+        "TYPE": "term",
+        "LABEL": "Corrstr1"
+    },
+    "CX": {
+        "TYPE": "integer",
+        "LABEL": "CX"
+    },
+    "CX_ACRONIMOOPM": {
+        "TYPE": "term",
+        "LABEL": "CX_Acronimoopm"
+    },
+    "CX_ADDITIONALINFO": {
+        "TYPE": "term",
+        "LABEL": "CX_Additionalinfo"
+    },
+    "CX_ALARMQUALIFIERLIST": {
+        "TYPE": "term",
+        "LABEL": "CX_Alarmqualifierlist"
+    },
+    "CX_AUTONBATTERIE": {
+        "TYPE": "integer",
+        "LABEL": "Tempo Autonomia Batterie"
+    },
+    "CX_CONOSCENZA": {
+        "TYPE": "term",
+        "LABEL": "CX_Conoscenza"
+    },
+    "CX_DATETIMENTTCREATION": {
+        "TYPE": "date",
+        "LABEL": "CX_Datetimenttcreation"
+    },
+    "CX_DATETIMEOSBEGIN": {
+        "TYPE": "date",
+        "LABEL": "CX_DateTimeOSBegin"
+    },
+    "CX_DATETIMEOSEND": {
+        "TYPE": "date",
+        "LABEL": "CX_DateTimeOSEnd"
+    },
+    "CX_DEGRADO": {
+        "TYPE": "term",
+        "LABEL": "CX_Degrado"
+    },
+    "CX_DEGRTIME": {
+        "TYPE": "date",
+        "LABEL": "CX_Degrtime"
+    },
+    "CX_DELETEACK": {
+        "TYPE": "integer",
+        "LABEL": "CX_Deleteack"
+    },
+    "CX_EMALIAS": {
+        "TYPE": "term",
+        "LABEL": "CX_Emalias"
+    },
+    "CX_EMFILTERTYPE": {
+        "TYPE": "term",
+        "LABEL": "CX_EmFilterType"
+    },
+    "CX_EOC": {
+        "TYPE": "term",
+        "LABEL": "EOC"
+    },
+    "CX_FREQUENCY_MSEM": {
+        "TYPE": "integer",
+        "LABEL": "CX_Frequency_Msem"
+    },
+    "CX_INTEXT": {
+        "TYPE": "term",
+        "LABEL": "CX_Intext"
+    },
+    "CX_LINE": {
+        "TYPE": "term",
+        "LABEL": "CX_Line"
+    },
+    "CX_MAINTENANCESTATUSCURRENT": {
+        "TYPE": "term",
+        "LABEL": "CX_MaintenancestatusCurrent"
+    },
+    "CX_MESSAGE_TYPE": {
+        "TYPE": "term",
+        "LABEL": "CX_Message_Type"
+    },
+    "CX_NELASTMOD": {
+        "TYPE": "date",
+        "LABEL": "CX_Nelastmod"
+    },
+    "CX_NOTE": {
+        "TYPE": "term",
+        "LABEL": "NoteTTM"
+    },
+    "CX_NTTID": {
+        "TYPE": "term",
+        "LABEL": "CX_NTTID"
+    },
+    "CX_NUMMSEM": {
+        "TYPE": "term",
+        "LABEL": "CX_Nummsem"
+    },
+    "CX_NUMUTENTIDISS": {
+        "TYPE": "integer",
+        "LABEL": "CX_Numutentidiss"
+    },
+    "CX_PASSOTLI": {
+        "TYPE": "term",
+        "LABEL": "CX_PassoTLI"
+    },
+    "CX_PORTELINK": {
+        "TYPE": "term",
+        "LABEL": "CX_Portelink"
+    },
+    "CX_PRGRUPPOEI": {
+        "TYPE": "term",
+        "LABEL": "CX_Prgruppoei"
+    },
+    "CX_PROBABLECAUSE": {
+        "TYPE": "term",
+        "LABEL": "CX_Probablecause"
+    },
+    "CX_ROUTINGTIME": {
+        "TYPE": "date",
+        "LABEL": "CX_RoutingTime"
+    },
+    "CX_SLOT": {
+        "TYPE": "term",
+        "LABEL": "CX_Slot"
+    },
+    "CX_SPD": {
+        "TYPE": "term",
+        "LABEL": "CX_Spd"
+    },
+    "CX_STATO": {
+        "TYPE": "term",
+        "LABEL": "CX_Stato"
+    },
+    "CX_SUBINTERFACE": {
+        "TYPE": "term",
+        "LABEL": "CX_Subinterface"
+    },
+    "CX_TIPOSEGNMSEM": {
+        "TYPE": "term",
+        "LABEL": "CX_Tiposegnmsem"
+    },
+    "CX_TOTALEPORTEDISSERVITE": {
+        "TYPE": "integer",
+        "LABEL": "CX_Totaleportedisservite"
+    },
+    "DATAPRESENTAZIONE": {
+        "TYPE": "date",
+        "LABEL": "DataPresentazione"
+    },
+    "DATASCOR_R2010_EXT": {
+        "TYPE": "date",
+        "LABEL": "DATASCOR_R2010_EXT"
+    },
+    "DATA_STATO": {
+        "TYPE": "date",
+        "LABEL": "DATA_STATO"
+    },
+    "DELAYEXPIRETIME": {
+        "TYPE": "date"
+    },
+    "DELETEDAT": {
+        "TYPE": "date",
+        "LABEL": "Storicizzato"
+    },
+    "DESCRATTAP": {
+        "TYPE": "term",
+        "LABEL": "Descr.AP"
+    },
+    "DURATA_ABAM": {
+        "TYPE": "integer",
+        "LABEL": "DURATA ABAM"
+    },
+    "DURATA_NE": {
+        "TYPE": "integer",
+        "LABEL": "DURATA NE"
+    },
+    "EM": {
+        "TYPE": "term",
+        "LABEL": "EM"
+    },
+    "ENB_ID": {
+        "TYPE": "term"
+    },
+    "FIRSTOCCURRENCE": {
+        "TYPE": "date",
+        "LABEL": "FirstOccurrence"
+    },
+    "FIRSTSEVERITY": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "2": "Warning",
+            "5": "Critical",
+            "0": "Clear",
+            "1": "Indeterminate",
+            "4": "Major",
+            "3": "Minor"
+        },
+        "LABEL": "FirstSeverity"
+    },
+    "FLAG_BBU": {
+        "TYPE": "term"
+    },
+    "FLAG_COMPT": {
+        "TYPE": "term",
+        "LABEL": "CoMPT"
+    },
+    "FLAG_DISP_ON_FIELD": {
+        "TYPE": "integer",
+        "LABEL": "Dispacciamento Automatico On Field"
+    },
+    "FLAG_FWA": {
+        "TYPE": "term"
+    },
+    "FLAG_INDICATIVO": {
+        "TYPE": "integer"
+    },
+    "FLAG_JEOPARDY": {
+        "TYPE": "integer"
+    },
+    "FLAG_PREDICTIVE_ANALYSIS": {
+        "TYPE": "integer",
+        "LABEL": "FlagPredAnalysis"
+    },
+    "FLAG_PS": {
+        "TYPE": "term",
+        "LABEL": "CellePS"
+    },
+    "FLAG_STD_PROBABLECAUSE": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "2": "Invio fax",
+            "3": "Invio mail e fax",
+            "0": "No mail, no fax",
+            "1": "Invio mail"
+        },
+        "LABEL": "FlagSTDProbablecause"
+    },
+    "FLAG_VULA_APPARATO": {
+        "TYPE": "term"
+    },
+    "FLAG_VULA_SCHEDA": {
+        "TYPE": "term"
+    },
+    "GAA_STATUS": {
+        "TYPE": "term",
+        "LABEL": "GAA_STATUS"
+    },
+    "HELIOSDATE": {
+        "TYPE": "date"
+    },
+    "HELIOSSTATUS": {
+        "TYPE": "integer"
+    },
+    "HISTORIZE_STATE": {
+        "TYPE": "term",
+        "LABEL": "HISTORIZE_STATE"
+    },
+    "IA_FWA": {
+        "TYPE": "integer"
+    },
+    "ID": {
+        "TYPE": "integer",
+        "LABEL": "ID"
+    },
+    "IMPACTANALISYS": {
+        "TYPE": "integer",
+        "LABEL": "Impactanalysis"
+    },
+    "IMPACTANALISYSLAST": {
+        "TYPE": "integer"
+    },
+    "IMPACTANALISYSLAST_TIME": {
+        "TYPE": "date"
+    },
+    "IMPACTANALISYSREFRESH_TIME": {
+        "TYPE": "date"
+    },
+    "IMPACTANALISYS_TIME": {
+        "TYPE": "date"
+    },
+    "INSERT_DATE": {
+        "TYPE": "date",
+        "LABEL": "INSERT_DATE"
+    },
+    "INTALARMID": {
+        "TYPE": "term",
+        "LABEL": "Intalarmid"
+    },
+    "IPEM": {
+        "TYPE": "term",
+        "LABEL": "IpEM"
+    },
+    "ISCORRELATED": {
+        "TYPE": "integer",
+        "LABEL": "IsCorrelated"
+    },
+    "ISROOTCAUSE": {
+        "TYPE": "integer",
+        "LABEL": "IsRootCause"
+    },
+    "JOURNAL_HISTORY_EXTRA": {
+        "TYPE": "list",
+        "LABEL": "JOURNAL_HISTORY_EXTRA"
+    },
+    "JOURNAL_HISTORY_MSG": {
+        "TYPE": "list",
+        "LABEL": "JOURNAL_HISTORY_MSG"
+    },
+    "LASTOCCURRENCE": {
+        "TYPE": "date",
+        "LABEL": "Ultimo Evento"
+    },
+    "LASTSEVERITY": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "2": "Warning",
+            "5": "Critical",
+            "0": "Clear",
+            "1": "Indeterminate",
+            "4": "Major",
+            "3": "Minor"
+        },
+        "LABEL": "LastSeverity"
+    },
+    "LAST_JOURNAL_MESSAGE": {
+        "TYPE": "term",
+        "LABEL": "Note"
+    },
+    "LAST_UPDATE": {
+        "TYPE": "date",
+        "LABEL": "Ultima modifica"
+    },
+    "LINKACTIVATIONTIME": {
+        "TYPE": "date",
+        "LABEL": "ActivationTime"
+    },
+    "LINKID": {
+        "TYPE": "term",
+        "LABEL": "CAC"
+    },
+    "LINKNAME": {
+        "TYPE": "term",
+        "LABEL": "LinkName"
+    },
+    "LINKSTATUS": {
+        "TYPE": "term",
+        "LABEL": "Status"
+    },
+    "LINKTYPE": {
+        "TYPE": "term",
+        "LABEL": "LinkType"
+    },
+    "LISTATD": {
+        "TYPE": "term"
+    },
+    "LISTA_PACCHETTI": {
+        "TYPE": "term"
+    },
+    "LIVELLO": {
+        "TYPE": "term"
+    },
+    "LOCDESCR": {
+        "TYPE": "term",
+        "LABEL": "Centrale"
+    },
+    "LOCDESCRA": {
+        "TYPE": "term",
+        "LABEL": "Centrale_A"
+    },
+    "LOCDESCRZ": {
+        "TYPE": "term",
+        "LABEL": "Centrale_Z"
+    },
+    "LOCGROUP": {
+        "TYPE": "term",
+        "LABEL": "Territorio"
+    },
+    "LOCGROUPA": {
+        "TYPE": "term",
+        "LABEL": "Location_A"
+    },
+    "LOCGROUPZ": {
+        "TYPE": "term",
+        "LABEL": "Location_Z"
+    },
+    "LOCID": {
+        "TYPE": "term",
+        "LABEL": "Codice Centrale"
+    },
+    "LOCIDA": {
+        "TYPE": "term",
+        "LABEL": "Codice_A"
+    },
+    "LOCIDZ": {
+        "TYPE": "term",
+        "LABEL": "Codice_Z"
+    },
+    "LOCNAME": {
+        "TYPE": "term",
+        "LABEL": "CodiceCLLI"
+    },
+    "LOCNAMEA": {
+        "TYPE": "term",
+        "LABEL": "CodiceCLLI_A"
+    },
+    "LOCNAMEZ": {
+        "TYPE": "term",
+        "LABEL": "CodiceCLLI_Z"
+    },
+    "MANAGER": {
+        "TYPE": "term",
+        "LABEL": "Manager"
+    },
+    "MANUAL_CLOSE": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "0": "<vuoto>",
+            "1": "Non Riscontrato"
+        },
+        "LABEL": "Non Riscontrato"
+    },
+    "MANUFACTURER": {
+        "TYPE": "term",
+        "LABEL": "Costruttore"
+    },
+    "MGMTCENTER": {
+        "TYPE": "term",
+        "LABEL": "Mgmtcenter"
+    },
+    "MGMTCENTERA": {
+        "TYPE": "term",
+        "LABEL": "AOU"
+    },
+    "MOB_ACCESSIBILITA": {
+        "TYPE": "term"
+    },
+    "MOB_ACCESSIB_SITO": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "9": "SHIFT (FULL SHIFT)",
+            "2": "BASE",
+            "5": "BUSINESS",
+            "6": "BUSINESS SMART",
+            "1": "H24",
+            "7": "CUSTOM",
+            "8": "SHIFT (H24)",
+            "4": "FULL SHIFT",
+            "3": "SHIFT"
+        },
+        "LABEL": "Classe Accessibilita' Sito"
+    },
+    "MOB_BANDABASECOMPT": {
+        "TYPE": "term",
+        "LABEL": "BandaBase CoMPT"
+    },
+    "MOB_CAT_SITO": {
+        "TYPE": "term",
+        "MAPPING_ENUM": {
+            "30": "GOLD",
+            "40": "SILVER",
+            "20": "PREMIUM",
+            "50": "COPPER",
+            "10": "EVENTO",
+            "0": "<none>"
+        },
+        "LABEL": "Categoria Sito"
+    },
+    "MOB_CELLNAME": {
+        "TYPE": "term",
+        "LABEL": "CellName"
+    },
+    "MOB_ID_DC": {
+        "TYPE": "term",
+        "LABEL": "MOB_id_dc"
+    },
+    "MOB_KEY_TYPE": {
+        "TYPE": "integer",
+        "LABEL": "MOB_KEY_TYPE"
+    },
+    "MOB_NOTE_ACCESSIBILITA": {
+        "TYPE": "term"
+    },
+    "MOB_OPE_ACCESSIBILITA": {
+        "TYPE": "term"
+    },
+    "MOB_SA_FDN": {
+        "TYPE": "term",
+        "LABEL": "MOB_sa_fdn"
+    },
+    "MOB_SLOGAN": {
+        "TYPE": "term",
+        "LABEL": "MOB_Slogan"
+    },
+    "MOB_SUPERCRITICAL": {
+        "TYPE": "term",
+        "LABEL": "MOB_Supercritical"
+    },
+    "MOB_XBBU": {
+        "TYPE": "term"
+    },
+    "MODELLO": {
+        "TYPE": "term",
+        "LABEL": "Modello"
+    },
+    "NEADDRESS": {
+        "TYPE": "term",
+        "LABEL": "NeAddress"
+    },
+    "NEID": {
+        "TYPE": "term",
+        "LABEL": "Identif Impianto"
+    },
+    "NELASTALARM": {
+        "TYPE": "date",
+        "LABEL": "NeLastAlarm"
+    },
+    "NESTARTALARM": {
+        "TYPE": "date",
+        "LABEL": "Inizio Evento"
+    },
+    "NETWORK": {
+        "TYPE": "term",
+        "LABEL": "Network"
+    },
+    "NETYPE": {
+        "TYPE": "term",
+        "LABEL": "Tipo Impianto"
+    },
+    "NE_FUORISERVIZIO": {
+        "TYPE": "term",
+        "LABEL": "NE fuori servizio"
+    },
+    "NMS": {
+        "TYPE": "integer",
+        "LABEL": "NMS"
+    },
+    "NMS_ADDITIONALINFO": {
+        "TYPE": "term",
+        "LABEL": "Additionalinfo"
+    },
+    "NMS_ADDITIONALTEXT": {
+        "TYPE": "term",
+        "LABEL": "AdditionalText"
+    },
+    "NMS_AWARDEEROLE": {
+        "TYPE": "term",
+        "LABEL": "Awardeerole"
+    },
+    "NMS_MANAGEDBY": {
+        "TYPE": "term",
+        "LABEL": "Managedby"
+    },
+    "NMS_NWSYNONYM": {
+        "TYPE": "term",
+        "LABEL": "NwSynonym"
+    },
+    "NMS_SITESHARING": {
+        "TYPE": "term",
+        "LABEL": "SiteSharing"
+    },
+    "NMS_SPECIFICPROBLEM": {
+        "TYPE": "term",
+        "LABEL": "SpecificProblem"
+    },
+    "NMS_STATOATTESASETTIME": {
+        "TYPE": "date",
+        "LABEL": "NMS_StatoAttesaSetTime"
+    },
+    "NODECLLI": {
+        "TYPE": "term"
+    },
+    "NODERIDOTTO": {
+        "TYPE": "term"
+    },
+    "NUMERO_JOURNAL": {
+        "TYPE": "integer",
+        "LABEL": "Contat. Note"
+    },
+    "NUMFIGLI": {
+        "TYPE": "integer",
+        "LABEL": "Figli"
+    },
+    "OPENONALARM": {
+        "TYPE": "date"
+    },
+    "OPERATIONAL_STATE": {
+        "TYPE": "term",
+        "LABEL": "Operational_State"
+    },
+    "ORIGINALALARMID": {
+        "TYPE": "term",
+        "LABEL": "OriginalAlarmId"
+    },
+    "ORIGINALCARDNAME": {
+        "TYPE": "term",
+        "LABEL": "OriginalCardName"
+    },
+    "ORIGINALNEID": {
+        "TYPE": "term",
+        "LABEL": "OriginalNeId"
+    },
+    "ORIGINALNETYPE": {
+        "TYPE": "term",
+        "LABEL": "OriginalNeType"
+    },
+    "ORIGINALPARENTIDS": {
+        "TYPE": "term",
+        "LABEL": "OriginalParentIDS"
+    },
+    "ORIGINALPORTNAME": {
+        "TYPE": "term",
+        "LABEL": "OriginalPortName"
+    },
+    "ORIGINALRESOURCENAME": {
+        "TYPE": "term",
+        "LABEL": "Nome Risorsa"
+    },
+    "ORIGINALRESOURCETYPE": {
+        "TYPE": "term",
+        "LABEL": "OriginalResourceType"
+    },
+    "ORIGINALSEVERITY": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "9": "2P",
+            "2": "Warning",
+            "5": "Critical",
+            "24": "3P",
+            "0": "Clear",
+            "1": "Indeterminate",
+            "666": "4P",
+            "8": "1P",
+            "4": "Major",
+            "3": "Minor"
+        },
+        "LABEL": "OriginalSeverity"
+    },
+    "ORIGINE_GUASTO": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "-3": "Sintomo KALEIDON",
+            "2": "CAUSA TX KALEIDON",
+            "0": "scorrelato",
+            "1": "ALLARME CAUSA",
+            "-2": "causa BB",
+            "-1": "causa TX",
+            "4": "ALLARME PADRE",
+            "3": "CAUSA TX KALEIDON -N"
+        },
+        "LABEL": "Origine Guasto"
+    },
+    "OUTAGE": {
+        "TYPE": "integer",
+        "LABEL": "Outage"
+    },
+    "PARENTIDS": {
+        "TYPE": "term",
+        "LABEL": "ParentIds"
+    },
+    "PARK": {
+        "TYPE": "integer",
+        "LABEL": "Park"
+    },
+    "PARKEXPIRETIME": {
+        "TYPE": "date",
+        "LABEL": "ParkExpireTime"
+    },
+    "PART_NUMBER": {
+        "TYPE": "term"
+    },
+    "POD1": {
+        "TYPE": "term"
+    },
+    "POD2": {
+        "TYPE": "term"
+    },
+    "PORTNAME": {
+        "TYPE": "term",
+        "LABEL": "Porta/Sottorete"
+    },
+    "PORTTYPE": {
+        "TYPE": "term",
+        "LABEL": "PortType"
+    },
+    "PREDICTION_TIME": {
+        "TYPE": "date",
+        "LABEL": "PredictionTime"
+    },
+    "PREMIUM_INWIT": {
+        "TYPE": "term",
+        "LABEL": "Premium Inwit"
+    },
+    "PRIORITY": {
+        "TYPE": "term",
+        "MAPPING_ENUM": {
+            "2": "ALTA",
+            "3": "BACKLOG",
+            "0": "BASSA",
+            "1": "MEDIA"
+        },
+        "LABEL": "Priorita' Sito"
+    },
+    "PROBABLECAUSE": {
+        "TYPE": "term",
+        "LABEL": "ProbableCause"
+    },
+    "PROPRIETA_APPARATO": {
+        "TYPE": "term"
+    },
+    "PROP_ASSET_TECNOLOGICO": {
+        "TYPE": "term",
+        "LABEL": "Proprieta' Asset Tecnologico"
+    },
+    "PROP_DEL_SITO": {
+        "TYPE": "term",
+        "LABEL": "Proprieta' Sito"
+    },
+    "PROP_LOCALITA_PORTA_ANTENNE": {
+        "TYPE": "term",
+        "LABEL": "Proprieta' Localita' PortaAntenne"
+    },
+    "PROP_LOCALI_APPARATI_TLC": {
+        "TYPE": "term",
+        "LABEL": "Proprieta' Locali Apparati TLC"
+    },
+    "PROP_PORTA_ANTENNE": {
+        "TYPE": "term",
+        "LABEL": "Proprieta' PortaAntenne"
+    },
+    "RECOVERY_EXITCODE": {
+        "TYPE": "integer",
+        "LABEL": "RECOVERY_EXITCODE"
+    },
+    "RECOVERY_FLOW": {
+        "TYPE": "term",
+        "LABEL": "RECOVERY_FLOW"
+    },
+    "RECOVERY_HISTORY": {
+        "TYPE": "list",
+        "LABEL": "RECOVERY_HISTORY"
+    },
+    "RECOVERY_STATUS": {
+        "TYPE": "term",
+        "LABEL": "Recovery status"
+    },
+    "RECOVERY_TYPE": {
+        "TYPE": "term",
+        "MAPPING_LIST": [
+            "MANUALE",
+            "AUTOMATICO"
+        ],
+        "LABEL": "Recovery_Type"
+    },
+    "RECOVERY_WF_ID": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "-25": "MN Nokia FERMO CELLA",
+            "-204": "CX Ericsson SWITCHING NETWORK TERMINAL FAULT",
+            "-102": "TX SDH Degrado",
+            "-22": "MN Huawei RET POSITION LOSS",
+            "-14": "TX ADSL Huawei",
+            "-32": "CX Alcatel AS1L",
+            "-20": "MN Ericsson 3G FERMO CELLA",
+            "-37": "CX Alcatel RILK",
+            "-39": "CX Alcatel RLKT",
+            "-252": "CX Italtel ALC su M2",
+            "-205": "CX Ericsson SOFTWARE ERROR",
+            "-9": "MN Ericsson 3G ANTENNA BRANCH B",
+            "-208": "CX Ericsson EMG FAULT su EMRP",
+            "-41": "CX Alcatel SLIF",
+            "-101": "TX SDH VC-UNEQ",
+            "-256": "CX Italtel PCP",
+            "-112": "CX Servizi Emergenza (NUE)",
+            "-36": "CX Alcatel RRLK",
+            "-12": "TX ADSL Alcatel",
+            "-11": "MN Ericsson 2G CELL LOGICAL CHANNEL",
+            "-200": "CX Ericsson EM FAULT",
+            "-19": "MN Ericsson 3G FERMO NODEB",
+            "-254": "CX Italtel DPR",
+            "-203": "CX Ericsson SP NODE RESTARTED",
+            "-38": "CX Alcatel DTCL",
+            "-258": "CX Italtel ALR",
+            "-10": "MN Ericsson 2G RP FAULT",
+            "15": "CX Italtel can",
+            "-35": "CX Alcatel RCCT",
+            "-211": "CX Ericsson SUBSCRIBER LINE CIRCUIT TESTER FAULT",
+            "-206": "CX Ericsson RP FAULT",
+            "-18": "MN Ericsson 3G ANTENNA BRANCH A",
+            "-33": "CX Alcatel S12L",
+            "-253": "CX Italtel DTP",
+            "-201": "CX Ericsson MPX-A DPU FAULT",
+            "-34": "CX Alcatel S23L",
+            "-28": "CX Alcatel ERSO",
+            "-29": "CX Alcatel CTLE",
+            "-23": "MN Huawei RET DATA ABNORMAL",
+            "-16": "MN Ericsson 2G PORT BLOCKED",
+            "-13": "TX ADSL Marconi",
+            "-207": "CX Ericsson EMG FAULT su STR",
+            "-21": "MN Huawei TMA RET COMMUNICATION ABNORMAL",
+            "-250": "CX Italtel MCS",
+            "-259": "CX Italtel MIC",
+            "-202": "CX Ericsson GROUP SWITCH FAULT",
+            "-100": "TX SDH LOS",
+            "-210": "CX Ericsson DISTRIBUTED SWITCH SUPERVISION",
+            "-24": "MN Nokia CELL OPERATION DEGRADED",
+            "-1": "Sconosciuto",
+            "-17": "MN Ericsson 2G SOFTWARE ERROR",
+            "-30": "CX Alcatel CLLK",
+            "-15": "TX ADSL Siemens",
+            "-31": "CX Alcatel TASL",
+            "-40": "CX Alcatel MPXLIOS",
+            "-260": "CX Italtel MICRO",
+            "-251": "CX Italtel ALC su ME",
+            "-26": "MN Nokia FERMO NODEB",
+            "-257": "CX Italtel MPE",
+            "20": "CX Italtel micro",
+            "-261": "CX Italtel CAN",
+            "-209": "CX Ericsson RINGING GENERATOR FAULT",
+            "-262": "CX Italtel GTX",
+            "-27": "CX Alcatel SMLC",
+            "-255": "CX Italtel DPL"
+        },
+        "LABEL": "Recovery_wf_ID"
+    },
+    "RESOURCENAME": {
+        "TYPE": "term",
+        "LABEL": "ResourceName"
+    },
+    "RESOURCENAMETOVIEW": {
+        "TYPE": "term",
+        "LABEL": "Risorsa"
+    },
+    "RESOURCESTATUS": {
+        "TYPE": "term",
+        "LABEL": "ResourceStatus"
+    },
+    "RESOURCETYPE": {
+        "TYPE": "term",
+        "LABEL": "ResourceType"
+    },
+    "RIPETITIVITA_ALL_30GG": {
+        "TYPE": "integer",
+        "LABEL": "Ripetitivita' ALL 30GG"
+    },
+    "RIPETITIVITA_TT_30GG": {
+        "TYPE": "integer",
+        "LABEL": "Ripetitivita' TT 30GG"
+    },
+    "RIPETITIVITA_TT_7GG": {
+        "TYPE": "integer"
+    },
+    "ROOTCAUSEID": {
+        "TYPE": "term",
+        "LABEL": "RootCauseID"
+    },
+    "SERVICEID": {
+        "TYPE": "term",
+        "LABEL": "TD"
+    },
+    "SERVICENAME": {
+        "TYPE": "term",
+        "LABEL": "ServiceName"
+    },
+    "SERVIZIODSL": {
+        "TYPE": "term"
+    },
+    "SEVERITY": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "2": "Warning",
+            "5": "Critical",
+            "0": "Clear",
+            "1": "Indeterminate",
+            "4": "Major",
+            "3": "Minor"
+        },
+        "LABEL": "Severity"
+    },
+    "SGU_CX": {
+        "TYPE": "term",
+        "LABEL": "SGU_CX"
+    },
+    "SM_FIELDS": {
+        "TYPE": "term"
+    },
+    "SOCIETA": {
+        "TYPE": "term"
+    },
+    "SOURCE": {
+        "TYPE": "term",
+        "MAPPING_LIST": [
+            "BB",
+            "TX",
+            "CX",
+            "MOB",
+            "RDG",
+            "NMS",
+            "NFV"
+        ],
+        "LABEL": "Dominio"
+    },
+    "STATO_IMPIANTO": {
+        "TYPE": "term",
+        "LABEL": "Stato Impianto"
+    },
+    "STD_PROBABLECAUSE": {
+        "TYPE": "term",
+        "LABEL": "Descrizione Standardizzata"
+    },
+    "STD_PROBABLECAUSE_NO": {
+        "TYPE": "term",
+        "LABEL": "Allarme"
+    },
+    "STRATEGICITA": {
+        "TYPE": "term",
+        "LABEL": "Strategicita' Centrale"
+    },
+    "SUBNETWORK": {
+        "TYPE": "term",
+        "LABEL": "Subnetwork"
+    },
+    "SUMMARY": {
+        "TYPE": "term",
+        "LABEL": "Dettaglio All"
+    },
+    "TIPOATTAP": {
+        "TYPE": "term",
+        "LABEL": "Tipo Att. AP"
+    },
+    "TIPOINDOTTO": {
+        "TYPE": "integer",
+        "LABEL": "TipoIndotto"
+    },
+    "TIPO_NTT": {
+        "TYPE": "integer",
+        "LABEL": "Tipo NTT"
+    },
+    "TOOPERATIONVIEW": {
+        "TYPE": "integer",
+        "LABEL": "Tooperationview"
+    },
+    "TOT_RECLAMI": {
+        "TYPE": "integer",
+        "LABEL": "Totale Reclami"
+    },
+    "TO_ROS": {
+        "TYPE": "integer",
+        "LABEL": "TO_ROS"
+    },
+    "TTCORRELATIONSTATE": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "2": "TT figlio correlazione intradominio",
+            "3": "TT figlio correlazione intradominio e padre di correlazione intradominio",
+            "0": "Nessuna Correlazione",
+            "1": "TT padre correlazione intradominio"
+        },
+        "LABEL": "TTCorrelationState"
+    },
+    "TTCOUNTER": {
+        "TYPE": "integer"
+    },
+    "TTIDENTIFIER": {
+        "TYPE": "term",
+        "LABEL": "Identif TT"
+    },
+    "TTOWNERID": {
+        "TYPE": "term",
+        "LABEL": "TTOwnerid"
+    },
+    "TTPARENTID": {
+        "TYPE": "term",
+        "LABEL": "TT Padre"
+    },
+    "TTPRIORITY": {
+        "TYPE": "term",
+        "MAPPING_ENUM": {
+            "2": "ALTA",
+            "3": "BACKLOG",
+            "0": "BASSA",
+            "1": "MEDIA"
+        },
+        "LABEL": "Priorita' TT"
+    },
+    "TTREQUESTSTATUS": {
+        "TYPE": "integer",
+        "MAPPING_ENUM": {
+            "104": "Chiusura Disservizio [Allarme Rientrato]_1",
+            "303": "WORKING",
+            "103": "In Attesa Chiusura [Allarme Rientrato]_1",
+            "6": "Annullato",
+            "2": "Dispacciato",
+            "5": "Chiuso",
+            "205": "Chiuso [Allarme Rientrato]_2",
+            "304": "EXTERNALIZED",
+            "102": "Dispacciato [Allarme Rientrato]_1",
+            "204": "Chiusura Disservizio [Allarme Rientrato]_2",
+            "3": "In Attesa Chiusura",
+            "-1": "Inviata Richiesta a TTM/TTS",
+            "207": "Sospeso [NTT Sospeso]",
+            "201": "In Carico [Allarme Rientrato]_2",
+            "-106": "Inviata Richiesta a TTM [Allarme Rientrato]",
+            "1": "In Carico",
+            "105": "Chiuso [Allarme Rientrato]_1",
+            "101": "In Carico [Allarme Rientrato]_1",
+            "301": "CLOSED",
+            "4": "Chiusura Disservizio/Indisponibilita",
+            "202": "Dispacciato [Allarme Rientrato]_2",
+            "0": "Nessuna Richiesta presso TTM/TTS Associata",
+            "302": "CANCELED",
+            "7": "Sospeso",
+            "300": "OPENED",
+            "203": "In Attesa Chiusura [Allarme Rientrato]_2"
+        },
+        "LABEL": "Stato TT"
+    },
+    "TTREQUESTTIME": {
+        "TYPE": "date",
+        "LABEL": "TTRequestTime"
+    },
+    "TX": {
+        "TYPE": "integer",
+        "LABEL": "TX"
+    },
+    "TXCX_DELTA": {
+        "TYPE": "integer",
+        "LABEL": "TXCX_Delta"
+    },
+    "TXCX_RELATION": {
+        "TYPE": "term",
+        "LABEL": "TXCX_Relation"
+    },
+    "TX_ALERTGROUP": {
+        "TYPE": "term",
+        "LABEL": "TX_Alertgroup"
+    },
+    "TX_CAMPIHCW": {
+        "TYPE": "term",
+        "LABEL": "TX_CampiHCW"
+    },
+    "TX_CLASSE_TP": {
+        "TYPE": "term",
+        "LABEL": "TX_Classe_TP"
+    },
+    "TX_CLIENTETOP2HCW": {
+        "TYPE": "term",
+        "LABEL": "TX_Clientetop2HCW"
+    },
+    "TX_CLIENTE_SPV": {
+        "TYPE": "term",
+        "LABEL": "TX_Cliente_SPV"
+    },
+    "TX_CODICEANELLO": {
+        "TYPE": "term",
+        "LABEL": "TX_Codiceanello"
+    },
+    "TX_COMPLESSOEM": {
+        "TYPE": "term",
+        "LABEL": "TX_Complessoem"
+    },
+    "TX_COMPLESSOLIDO": {
+        "TYPE": "term",
+        "LABEL": "TX_Complessolido"
+    },
+    "TX_COMPLESSONM": {
+        "TYPE": "term",
+        "LABEL": "TX_Complessonm"
+    },
+    "TX_CUSTOM1": {
+        "TYPE": "integer",
+        "LABEL": "TX_Custom1"
+    },
+    "TX_CUSTOM10": {
+        "TYPE": "integer",
+        "LABEL": "TX_Custom10"
+    },
+    "TX_CUSTOM2": {
+        "TYPE": "integer",
+        "LABEL": "TX_Custom2"
+    },
+    "TX_CUSTOM3": {
+        "TYPE": "integer",
+        "LABEL": "TX_Custom3"
+    },
+    "TX_CUSTOM9": {
+        "TYPE": "integer",
+        "LABEL": "TX_Custom9"
+    },
+    "TX_CUSTOMA": {
+        "TYPE": "term",
+        "LABEL": "TX_Customa"
+    },
+    "TX_CUSTOMB": {
+        "TYPE": "term",
+        "LABEL": "TX_Customb"
+    },
+    "TX_CUSTOME": {
+        "TYPE": "term",
+        "LABEL": "TX_Custome"
+    },
+    "TX_DATACOS": {
+        "TYPE": "date",
+        "LABEL": "TX_DataCOS"
+    },
+    "TX_DATACOS_ROS": {
+        "TYPE": "date",
+        "LABEL": "TX_DataCOS_ROS"
+    },
+    "TX_DATAROS": {
+        "TYPE": "date",
+        "LABEL": "TX_DataROS"
+    },
+    "TX_DESCRCATEGORIA": {
+        "TYPE": "term",
+        "LABEL": "TX_Descrcategoria"
+    },
+    "TX_FILA": {
+        "TYPE": "term",
+        "LABEL": "TX_Fila"
+    },
+    "TX_FLAGDIVERSIFICAZIONE": {
+        "TYPE": "term",
+        "LABEL": "TX_Flagdiversificazione"
+    },
+    "TX_FLAGPROTEZIONE": {
+        "TYPE": "term",
+        "LABEL": "TX_Flagprotezione"
+    },
+    "TX_FORWARD2CX": {
+        "TYPE": "integer",
+        "LABEL": "TX_Forward2CX"
+    },
+    "TX_FORWARD2HCW": {
+        "TYPE": "integer",
+        "LABEL": "TX_Forward2HCW"
+    },
+    "TX_FORWARD2TISA": {
+        "TYPE": "integer",
+        "LABEL": "TX_StatoCorrelazione"
+    },
+    "TX_FREQUENCYCOUNT": {
+        "TYPE": "integer",
+        "LABEL": "TX_FrequencyCount"
+    },
+    "TX_FREQUENCYTIME": {
+        "TYPE": "integer",
+        "LABEL": "TX_FrequencyTime"
+    },
+    "TX_IDINNESCO": {
+        "TYPE": "term",
+        "LABEL": "TX_IDInnesco"
+    },
+    "TX_ISABILITANTE": {
+        "TYPE": "integer",
+        "LABEL": "TX_ISAbilitante"
+    },
+    "TX_ISALARMORIGINE": {
+        "TYPE": "integer",
+        "LABEL": "TX_Isalarmorigine"
+    },
+    "TX_ISTOPOCORRELATED": {
+        "TYPE": "integer",
+        "LABEL": "TX_Istopocorrelated"
+    },
+    "TX_MODULOEM": {
+        "TYPE": "term",
+        "LABEL": "TX_ModuloEM"
+    },
+    "TX_MODULOLIDO": {
+        "TYPE": "term",
+        "LABEL": "TX_ModuloLido"
+    },
+    "TX_MODULONM": {
+        "TYPE": "term",
+        "LABEL": "TX_ModuloNM"
+    },
+    "TX_NETWORKALARM": {
+        "TYPE": "term",
+        "LABEL": "TX_NETWORKALARM"
+    },
+    "TX_NODEPROGR": {
+        "TYPE": "term",
+        "LABEL": "TX_Nodeprogr"
+    },
+    "TX_NOMELP": {
+        "TYPE": "term",
+        "LABEL": "TX_NomeLP"
+    },
+    "TX_NUMEROFIGLI": {
+        "TYPE": "integer",
+        "LABEL": "TX_Numerofigli"
+    },
+    "TX_NUMGRUPPIINSTRADATI": {
+        "TYPE": "integer",
+        "LABEL": "TX_Numgruppiinstradati"
+    },
+    "TX_PAYLOADTYPE": {
+        "TYPE": "term",
+        "LABEL": "TX_Payloadtype"
+    },
+    "TX_PERSISTENCETIMEFOB": {
+        "TYPE": "integer",
+        "LABEL": "TX_PersistenceTimeFOB"
+    },
+    "TX_PERSISTENCETIMEOB": {
+        "TYPE": "integer",
+        "LABEL": "TX_PersistenceTimeOB"
+    },
+    "TX_PRESENZALOP": {
+        "TYPE": "integer",
+        "LABEL": "TX_PresenzaLOP"
+    },
+    "TX_PROGRGRUPPO": {
+        "TYPE": "term",
+        "LABEL": "TX_Progrgruppo"
+    },
+    "TX_RETECLIENTEGRUPPO": {
+        "TYPE": "term",
+        "LABEL": "TX_Reteclientegruppo"
+    },
+    "TX_SALA": {
+        "TYPE": "term",
+        "LABEL": "TX_Sala"
+    },
+    "TX_STATOAFFIDABILITA": {
+        "TYPE": "term",
+        "LABEL": "TX_Statoaffidabilita"
+    },
+    "TX_STATOESERCIZIOSCHEDA": {
+        "TYPE": "integer",
+        "LABEL": "TX_Statoesercizioscheda"
+    },
+    "TX_STATOMTAMASS": {
+        "TYPE": "term",
+        "LABEL": "TX_Statomtamass"
+    },
+    "TX_STRATORETE": {
+        "TYPE": "term",
+        "LABEL": "TX_Stratorete"
+    },
+    "TX_SUBNOC": {
+        "TYPE": "term",
+        "LABEL": "TX_Subnoc"
+    },
+    "TX_TELAIOEM": {
+        "TYPE": "term",
+        "LABEL": "TX_TelaioEM"
+    },
+    "TX_TELAIOLIDO": {
+        "TYPE": "term",
+        "LABEL": "TX_TelaioLido"
+    },
+    "TX_TELAIONM": {
+        "TYPE": "term",
+        "LABEL": "TX_TelaioNM"
+    },
+    "TX_TIPOCOSTITUZIONE": {
+        "TYPE": "term",
+        "LABEL": "TX_Tipocostituzione"
+    },
+    "TX_TIPODEVICEMASS": {
+        "TYPE": "term",
+        "LABEL": "TX_Tipodevicemass"
+    },
+    "TX_TIPOTERMINAZ": {
+        "TYPE": "term",
+        "LABEL": "TX_Tipoterminaz"
+    },
+    "TX_TIPOUTILGRUPPO": {
+        "TYPE": "term",
+        "LABEL": "TX_Tipoutilgruppo"
+    },
+    "UBICAB": {
+        "TYPE": "term"
+    },
+    "UTR": {
+        "TYPE": "term"
+    },
+    "WRIDENTIFIER": {
+        "TYPE": "term",
+        "LABEL": "Identif WR"
+    },
+    "WRSTATUS": {
+        "TYPE": "term",
+        "LABEL": "Stato WR"
+    },
+    "WRTYPE": {
+        "TYPE": "term",
+        "MAPPING_LIST": [
+            "Classic",
+            "Specialist"
+        ],
+        "LABEL": "Tipo WR"
+    },
+    "ZCL": {
+        "TYPE": "term"
+    },
+    "indexForEs": {
+        "TYPE": "term"
+    }
+}

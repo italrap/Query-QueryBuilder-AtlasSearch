@@ -1,9 +1,6 @@
 /*
-* jQuery QueryBuilder Elasticsearch 'bool' query support
-*  jQuery-QueryBuilder-AtlasSearch
+* jQuery-QueryBuilder-AtlasSearch query support
 * https://github.com/mistic100/jQuery-QueryBuilder
-* https://www.elastic.co/
-* https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html
 */
 
 // Register plugin
@@ -149,15 +146,20 @@
 
                 if (['AND', 'OR'].indexOf(data.condition.toUpperCase()) === -1) {
                     throw new Error(
-                        'Unable to build Elasticsearch bool query with condition "{0}"'
+                        'Unable to build AtlasSearch query with condition "{0}"'
                             .replace('{0}', data.condition)
                     );
                 }
 
-                var parts = {};
-                parts.add = function (k, v) {
-                    if (this.hasOwnProperty(k)) { this[k].push(v) }
-                    else { this[k] = [v] }
+                var parts = {
+                    add: function (k, v) {
+                        if (this.hasOwnProperty(k)) { this[k].push(v) }
+                        else {
+                            this[k] = [v];
+                            if (k === 'should')
+                                this['minimumShouldMatch'] = 1;
+                        }
+                    }
                 };
 
                 data.rules.forEach(function (rule) {
@@ -204,16 +206,19 @@
 
                         if (mdb === undefined) {
                             throw new Error(
-                                'Unknown atlassearch operation for operator "{0}"'
+                                'Unknown AtlasSearch operation for operator "{0}"'
                                     .replace('{0}', rule.operator)
                             );
                         }
 
+                        // TODO: verifica gestione lowercase
                         if (rule.data && rule.data.hasOwnProperty('lowercase'))
                             rule.field = rule.field + ".lowercase";
 
+                        /* // non serve
                         if (rule.type && rule.type == 'string')
                             rule.field = rule.field + ".keyword";
+                        */
 
                         if (ope.nb_inputs !== 0) {
                             var es_key_val = {};
@@ -241,17 +246,25 @@
                                 /*}*/
 
                             } else {
-                                es_key_val[rule.field] = mdb.call(that, get_value(rule));
-                                part[getQueryDSLWord(rule)] = es_key_val;
+                                // es_key_val[rule.field] = mdb.call(that, get_value(rule));
+                                // part[getQueryDSLWord(rule)] = es_key_val;
+                                part['path'] = rule.field;
+                                part['query'] = mdb.call(that, get_value(rule));
+
+
                             }
                         }
                         else {
                             var es_key_val = mdb.call(that, rule.value);
                             var val = {};
                             if (es_key_val === 'exists') {
-                                val["field"] = rule.field;
+                                val["path"] = rule.field;
+                                // val["field"] = rule.field;
                             } else if (es_key_val === 'term') {
-                                val[rule.field] = get_value(rule);
+                                val['path'] = rule.field;
+                                val['query'] = get_value(rule);
+
+                                // val[rule.field] = get_value(rule);
                             }
                             part[es_key_val] = val;
                         }
@@ -262,7 +275,7 @@
                             || rule.operator === 'not_contains' || rule.operator === 'not_begins_with'
                             || rule.operator === 'not_ends_with' || rule.operator === 'is_null'
                             || rule.operator === 'is_not_empty')) {
-                            return { 'bool': { 'must_not': [part] } }
+                            return { 'compound': { 'mustNot': [part] } }
                         } else {
                             return part
                         }
@@ -278,8 +291,9 @@
 
                 });
 
+                // Verificare se necessario
                 delete parts.add;
-                return { 'bool': parts }
+                return { 'compound': parts }
             }(data));
         }
 
@@ -302,7 +316,7 @@
 
                 if (['AND', 'OR'].indexOf(data.condition.toUpperCase()) === -1) {
                     throw new Error(
-                        'Unable to build Elasticsearch query String query with condition "{0}"'
+                        'Unable to build AtlasSearch query String query with condition "{0}"'
                         .replace('{0}', data.condition)
                     );
                 }
@@ -372,10 +386,10 @@
             begins_ends = /.*(begins_with|ends_with)$/.exec(rule.operator);
 
         if (term !== null && wildcard !== null) { return 'wildcard'; }
-        if (term !== null) { return (!isDate ? 'term' : 'range'); } //TODO riportare le modifiche nel altro progetto
+        if (term !== null) { return (!isDate ? 'term' : 'range'); }
         if (terms !== null) { return 'terms'; }
-        if (matchs !== null) { return 'regexp'; }
-        if (begins_ends !== null) { return 'regexp'; }
+        if (matchs !== null) { return 'regex'; }
+        if (begins_ends !== null) { return 'regex'; }
         return 'range';
     }
 
@@ -394,7 +408,7 @@
                     case 'is_null':
                     case 'is_not_empty':
                     case 'not_between':
-                        return 'must_not';
+                        return 'mustNot';
                     default:
                         return 'must';
                 }
