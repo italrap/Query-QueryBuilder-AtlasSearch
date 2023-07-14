@@ -58,12 +58,21 @@
             between: function (v) { return { 'gte': v[0], 'lte': v[1] }; },
             not_between: function (v) { return { 'gte': v[0], 'lte': v[1] }; },
             in: function (v) {
-                if (Array.isArray(v) && v.length == 1) v = v[0]; if (typeof v === 'string') return v.split(',').map(function (e) { return escapeBackSlash(e.toString().trim()/*.toLowerCase()*/); });
-                else return v.map(function (e) { return escapeBackSlash(e.toString().trim()/*.toLowerCase()*/); });
+                // if (Array.isArray(v) && v.length == 1 && typeof v === 'string')
+                //     v = v[0];
+                if (typeof v === 'string')
+                    return v.split(',').map(function (e) { return escapeBackSlash(e.toString().trim()/*.toLowerCase()*/); });
+                else
+                    return v.map(function (e) { return typeof e === 'string' ? escapeBackSlash(e.toString().trim()/*.toLowerCase()*/) : e; });
             },
             not_in: function (v) {
-                if (Array.isArray(v) && v.length == 1) v = v[0]; if (typeof v === 'string') return v.split(',').map(function (e) { return escapeBackSlash(e.toString().trim()/*.toLowerCase()*/); });
-                else return v.map(function (e) { return escapeBackSlash(e.toString().trim()/*.toLowerCase()*/); });
+                // if (Array.isArray(v) && v.length == 1)
+                //     v = v[0];
+                if (typeof v === 'string')
+                    return v.split(',').map(function (e) { return escapeBackSlash(e.toString().trim()/*.toLowerCase()*/); });
+                else
+                    return v.map(function (e) { return typeof e === 'string' ? escapeBackSlash(e.toString().trim()/*.toLowerCase()*/) : e; });
+                // return v.map(function (e) { return escapeBackSlash(e.toString().trim()/*.toLowerCase()*/); });
             },
             last_n_minutes: function (v) {
                 if (Array.isArray(v) && v.length == 2)
@@ -248,10 +257,26 @@
                             } else {
                                 // es_key_val[rule.field] = mdb.call(that, get_value(rule));
                                 // part[getQueryDSLWord(rule)] = es_key_val;
-                                part['path'] = rule.field;
-                                part['query'] = mdb.call(that, get_value(rule));
+                                var op = getQueryDSLWord(rule)
+                                part[op] = {
+                                    path: rule.field,
+                                }
 
-
+                                if (op === 'regex') {
+                                    part[op]['allowAnalyzedField'] = true;
+                                }
+                                if (op === 'in') {
+                                    var value = mdb.call(that, get_value(rule));
+                                    part[op]['value'] = value;
+                                } else if (op === 'range') {
+                                    $.extend(part[op], mdb.call(that, get_value(rule)));
+                                } else {
+                                    var value = mdb.call(that, get_value(rule));
+                                    if (Array.isArray(value))
+                                        part[op]['query'] = value.join('|');
+                                    else
+                                        part[op]['query'] = value;
+                                }
                             }
                         }
                         else {
@@ -263,7 +288,6 @@
                             } else if (es_key_val === 'term') {
                                 val['path'] = rule.field;
                                 val['query'] = get_value(rule);
-
                                 // val[rule.field] = get_value(rule);
                             }
                             part[es_key_val] = val;
@@ -383,11 +407,15 @@
             wildcard = /.(\*|\?)/.exec(rule.value),
             terms = /^(in|not_in)$/.exec(rule.operator),
             matchs = /^(contains|not_contains)$/.exec(rule.operator),
-            begins_ends = /.*(begins_with|ends_with)$/.exec(rule.operator);
+            begins_ends = /.*(begins_with|ends_with)$/.exec(rule.operator),
+            isNumber = /^integer/.exec(rule.type);
 
+        if (isNumber !== null && (term !== null || terms !== null)) {
+            return 'in';
+        }
         if (term !== null && wildcard !== null) { return 'wildcard'; }
         if (term !== null) { return (!isDate ? 'term' : 'range'); }
-        if (terms !== null) { return 'terms'; }
+        if (terms !== null) { return 'regex'; }
         if (matchs !== null) { return 'regex'; }
         if (begins_ends !== null) { return 'regex'; }
         return 'range';

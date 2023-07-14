@@ -5,6 +5,21 @@ var basic_filters = [
         type: 'string'
     },
     {
+        id: 'SEVERITY',
+        label: 'SEVERITY',
+        type: 'integer'
+    },
+    {
+        id: 'SOURCE',
+        label: 'SOURCE',
+        type: 'string'
+    },
+    {
+        id: 'SUMMARY',
+        label: 'Summary',
+        type: 'string'
+    },
+    {
         id: 'name',
         label: 'Name',
         type: 'string'
@@ -547,6 +562,99 @@ $(function () {
                         ]
                     }
                 ],
+            }
+        });
+
+        assert.deepEqual(
+            $b.queryBuilder('getAtlasSearch'),
+            { "bool": { "must": [{ "term": { "name.keyword": "PAUL" } }] } },
+            'Should build a term query and value is capitalized'
+        );
+
+    });
+
+
+    QUnit.test("AGENT exists", function (assert) {
+
+        $b.queryBuilder({
+            filters: basic_filters,
+            rules: {
+                condition: 'AND',
+                rules: [
+                    { id: 'AGENT', field: 'AGENT', operator: 'is_not_null' },
+                    { id: 'AGENT', field: 'AGENT', operator: 'is_null' },
+                ]
+            }
+        });
+
+        assert.deepEqual(
+            $b.queryBuilder('getAtlasSearch'),
+            { "bool": { "must": [{ "term": { "name.keyword": "PAUL" } }] } },
+            'Should build a term query and value is capitalized'
+        );
+
+    });
+
+    QUnit.test("SOURCE in", function (assert) {
+
+        $b.queryBuilder({
+            filters: basic_filters,
+            rules: {
+                condition: 'AND',
+                rules: [
+                    { id: 'SOURCE', field: 'SOURCE', operator: 'in', value : ['MOB','BB'] },
+                    { id: 'SOURCE', field: 'SOURCE', operator: 'in', value : 'MOB,BB' },
+                //     { condition: 'OR' ,
+                //     rules: [ 
+                //         { id: 'AGENT', field: 'AGENT', operator: 'is_null' },
+                //         { id: 'SOURCE', field: 'SOURCE', operator: 'equal', value : 'MOB' },
+                //     ]
+                // }
+                ]
+            }
+        });
+
+        assert.deepEqual(
+            $b.queryBuilder('getAtlasSearch'),
+            { "bool": { "must": [{ "term": { "name.keyword": "PAUL" } }] } },
+            'Should build a term query and value is capitalized'
+        );
+
+    });
+
+    // QUnit.test("SUMMARY", function (assert) {
+
+    //     $b.queryBuilder({
+    //         filters: basic_filters,
+    //         rules: {
+    //             condition: 'AND',
+    //             rules: [
+    //                 { id: 'SUMMARY', field: 'SUMMARY', operator: 'contains', value : '[' },
+    //             ]
+    //         }
+    //     });
+
+    //     assert.deepEqual(
+    //         $b.queryBuilder('getAtlasSearch'),
+    //         { "bool": { "must": [{ "term": { "name.keyword": "PAUL" } }] } },
+    //         'Should build a term query and value is capitalized'
+    //     );
+
+    // });
+
+
+    QUnit.test("SEVERITY", function (assert) {
+
+        $b.queryBuilder({
+            filters: basic_filters,
+            rules: {
+                condition: 'AND',
+                rules: [
+                    { id: 'SEVERITY', field: 'SEVERITY', operator: 'not_equal', value : 4 },
+                    { id: 'SEVERITY', field: 'SEVERITY', operator: 'less', value : 4 },
+                    { id: 'SEVERITY', field: 'SEVERITY', operator: 'in', value : [4,5] },
+                    { id: 'SEVERITY', field: 'SEVERITY', operator: 'in', value : [4] },
+                ]
             }
         });
 
