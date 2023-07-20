@@ -1,5 +1,9 @@
 /*
 * jQuery-QueryBuilder-AtlasSearch query support
+* https://github.com/italrap/jQuery-QueryBuilder-AtlasSearch.git
+*
+* 
+*
 * https://github.com/mistic100/jQuery-QueryBuilder
 */
 

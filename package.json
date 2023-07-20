@@ -1,5 +1,5 @@
 {
-  "name": "jQuery-QueryBuilder-Elasticsearch",
+  "name": "jQuery-QueryBuilder-Atlassearch",
   "version": "1.0.0",
   "scripts": {
     "test": "grunt test"

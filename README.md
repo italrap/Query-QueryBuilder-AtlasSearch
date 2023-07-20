@@ -1,6 +1,8 @@
 # jQuery QueryBuilder Atlassearch
 
-Allows to export [jQuery QueryBuilder](http://mistic100.github.io/jQuery-QueryBuilder) rules as an AtlasMongosearch [query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html).
+Allows to export [jQuery QueryBuilder](http://mistic100.github.io/jQuery-QueryBuilder) rules as an AtlasMongosearch.
+
+Inspired to [jQuery-QueryBuilder-Elasticsearch](https://github.com/davegraziosi/jQuery-QueryBuilder-Elasticsearch.git)
 
 ### Dependencies
  * jQuery QueryBuilder >= 2.0
@@ -14,7 +16,7 @@ The plugin adds a new public method to all QueryBuilder instances.
 Performs validation and returns the rules as a valid AtlasSearch query.
 
 ```js
-var esQuery = $('#builder').queryBuilder('getAtlasSearch');
+var asQuery = $('#builder').queryBuilder('getAtlasSearch');
 ```
 
 ### Operators configuration
